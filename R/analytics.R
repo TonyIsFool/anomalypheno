@@ -1,4 +1,4 @@
-﻿
+
 #' Merge Weak or Unstable Phenotypes
 #'
 #' @description
@@ -194,7 +194,7 @@ pheno_rename <- function(result) {
 #' three complementary internal clustering criteria:
 #'
 #' \describe{
-#'   \item{Silhouette}{Mean s(i) \in \[-1,1\]: measures how well each instance
+#'   \item{Silhouette}{Mean silhouette s(i) in \eqn{[-1, 1]}: measures how well each instance
 #'     fits its assigned phenotype relative to the nearest alternative.
 #'     Values > 0.5 indicate a strong structure.}
 #'   \item{Calinski-Harabász (CH)}{Between-cluster scatter / within-cluster

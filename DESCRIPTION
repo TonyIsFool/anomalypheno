@@ -5,10 +5,10 @@ Authors@R: person("Tony", "Lu", email = "xulunt123@gmail.com",
     role = c("aut", "cre"))
 Description:
     Introduces the concept of "anomaly phenotyping" for univariate time
-    series — the first framework that not only detects anomalies but
-    automatically classifies them into interpretable, reproducible types
-    (phenotypes). The pipeline operates in four layers: (1) detection of
-    anomaly intervals via Spectral Residual (Ren et al., 2019
+    series. The framework not only detects anomalies but automatically
+    classifies them into interpretable, reproducible types (phenotypes).
+    The pipeline operates in four layers: (1) detection of anomaly intervals
+    via Spectral Residual (Ren et al., 2019
     <doi:10.1145/3292500.3330680>) or Local Outlier Factor sliding-window
     engine; (2) 27-dimensional multi-domain feature extraction covering
     morphological, spectral, temporal context, relative severity, and
@@ -21,7 +21,7 @@ Description:
     feature importance ranking. Additional functions support external
     validation against ground-truth labels (Adjusted Rand Index, purity,
     per-phenotype F1), bootstrap stability analysis (Jaccard similarity
-    across B resamples), prospective classification of new anomaly segments,
+    across resamples), prospective classification of new anomaly segments,
     and cross-series phenotype comparison (Bhattacharyya similarity).
     A benchmark dataset with three known phenotype classes is included.
 License: GPL-3
@@ -35,9 +35,7 @@ Imports:
     grDevices
 Suggests:
     testthat (>= 3.0.0),
-    knitr,
-    rmarkdown
-VignetteBuilder: knitr
+    patchwork
 Config/testthat/edition: 3
 URL: https://github.com/TonyIsFool/anomalypheno
 BugReports: https://github.com/TonyIsFool/anomalypheno/issues

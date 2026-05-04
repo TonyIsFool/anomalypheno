@@ -1,4 +1,4 @@
-﻿
+
 #' Simulate Time Series with Controlled Anomaly Phenotypes
 #'
 #' @description
@@ -235,6 +235,8 @@ pheno_score <- function(result, type = c("combined", "zscore", "confidence"),
 #' `dplyr`, `ggplot2`, or CSV export workflows.
 #'
 #' @param x An `AnomPhenoResult` from [pheno_diagnose()].
+#' @param row.names `NULL` or a character vector of row names. Ignored.
+#' @param optional Logical. Ignored (for S3 compatibility).
 #' @param score_type Character. Score type passed to `pheno_score()`. One of
 #'   `"combined"` (default), `"zscore"`, `"confidence"`.
 #' @param ... Ignored (for S3 consistency).
@@ -261,7 +263,8 @@ pheno_score <- function(result, type = c("combined", "zscore", "confidence"),
 #' }
 #'
 #' @export
-as.data.frame.AnomPhenoResult <- function(x, score_type = "combined", ...) {
+as.data.frame.AnomPhenoResult <- function(x, row.names = NULL, optional = FALSE,
+                                          score_type = "combined", ...) {
   result   <- x
   n        <- length(result$x)
   inst_tab <- result$instance_table

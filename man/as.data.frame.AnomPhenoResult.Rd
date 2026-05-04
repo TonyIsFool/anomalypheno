@@ -4,10 +4,20 @@
 \alias{as.data.frame.AnomPhenoResult}
 \title{Coerce an AnomPhenoResult to a Tidy Data Frame}
 \usage{
-\method{as.data.frame}{AnomPhenoResult}(x, score_type = "combined", ...)
+\method{as.data.frame}{AnomPhenoResult}(
+  x,
+  row.names = NULL,
+  optional = FALSE,
+  score_type = "combined",
+  ...
+)
 }
 \arguments{
 \item{x}{An \code{AnomPhenoResult} from \code{\link[=pheno_diagnose]{pheno_diagnose()}}.}
+
+\item{row.names}{\code{NULL} or a character vector of row names. Ignored.}
+
+\item{optional}{Logical. Ignored (for S3 compatibility).}
 
 \item{score_type}{Character. Score type passed to \code{pheno_score()}. One of
 \code{"combined"} (default), \code{"zscore"}, \code{"confidence"}.}
