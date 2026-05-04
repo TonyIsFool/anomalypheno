@@ -1,0 +1,43 @@
+Package: AnomalyPheno
+Title: Unsupervised Anomaly Phenotyping for Time Series via Topological Data Analysis
+Version: 0.1.0
+Authors@R: person("Tony", "Lu", email = "xulunt123@gmail.com",
+    role = c("aut", "cre"))
+Description:
+    Introduces the concept of "anomaly phenotyping" for univariate time
+    series — the first framework that not only detects anomalies but
+    automatically classifies them into interpretable, reproducible types
+    (phenotypes). The pipeline operates in four layers: (1) detection of
+    anomaly intervals via Spectral Residual (Ren et al., 2019
+    <doi:10.1145/3292500.3330680>) or Local Outlier Factor sliding-window
+    engine; (2) 27-dimensional multi-domain feature extraction covering
+    morphological, spectral, temporal context, relative severity, and
+    complexity domains (approximate entropy, Hurst exponent, turning-point
+    rate, trend slope, zero-crossing rate); (3) Multi-Resolution Mapper
+    topological clustering (Singh et al., 2007) run at three resolution
+    scales with majority-vote aggregation and instance-level stability
+    scores; and (4) automated phenotype characterisation including canonical
+    templates, severity classification, phenotype confidence scores, and a
+    feature importance ranking. Additional functions support external
+    validation against ground-truth labels (Adjusted Rand Index, purity,
+    per-phenotype F1), bootstrap stability analysis (Jaccard similarity
+    across B resamples), prospective classification of new anomaly segments,
+    and cross-series phenotype comparison (Bhattacharyya similarity).
+    A benchmark dataset with three known phenotype classes is included.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Imports:
+    stats,
+    ggplot2,
+    grDevices
+Suggests:
+    testthat (>= 3.0.0),
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+Config/testthat/edition: 3
+URL: https://github.com/TonyIsFool/anomalypheno
+BugReports: https://github.com/TonyIsFool/anomalypheno/issues

@@ -1,0 +1,19 @@
+# R build artifacts
+*.Rcheck/
+*.tar.gz
+*.zip
+Rplots.pdf
+
+# R session
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+
+# Demo / scratch outputs
+demo_output/
+data-raw/
+
+# OS
+.DS_Store
+Thumbs.db
